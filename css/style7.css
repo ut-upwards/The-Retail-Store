@@ -1,0 +1,41 @@
+body{
+	background-color: red ;
+}
+
+p{
+			font-size: 22px;
+			font-family: serif;
+			font-weight: bold;
+}
+
+.page_title {
+	font-size: 2.5em;
+	font-family: sans-serif;   /* font change required */ 
+	text-align: center;
+	background-color: #48D1CC;
+	padding: 5px;
+	margin-left:3%;
+	margin-right:3%;
+
+}
+.homepage_button1 {
+	border-radius: 9px;
+	background-color: #BAD7EC;
+	margin-left: 1335px;
+	border:2px solid black
+
+}
+
+.homepage_button2 {
+	background-color: #BAD7EC;
+	
+}
+
+.button_img {
+	border:50px solid black;
+}
+
+.container {
+	display: flex;
+	background-color: black;
+}

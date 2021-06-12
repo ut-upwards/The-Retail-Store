@@ -1,0 +1,705 @@
+CREATE DATABASE retail_store ;
+
+
+CREATE TABLE vegetables 
+(	serial_num INTEGER (8) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	vegetable_name VARCHAR(25),
+	quantity DECIMAL(4,1),
+	price INTEGER(4)
+);
+
+
+INSERT INTO vegetables (vegetable_name, quantity, price) VALUES
+("Carrot", 5.2, 25),
+("Potato", 94.7, 35),
+("Tomato", 41.2, 40),
+("Onion", 58.5, 50),
+("Garlic", 26.6, 95),
+("Eggplant", 22.0, 20),
+("Ladyfinger", 19.5, 35),
+("Corn", 9.0, 300),
+("Mushroom", 15.5, 250),
+("Pumpkin", 12.8, 30),
+("Capsicum", 15.8, 30),
+("Beetroot", 4.6, 60),
+("Cabbage", 3.2, 45),
+("Peas", 15.7, 20),
+("Raddish", 50, 20),
+("Sweet Potato", 2.4, 70),
+("Chilli", 6.5, 120),
+("Coriander", 50, 120),
+("Beans", 10.4, 65),
+("Spinach", 1.5, 70),
+("Cauliflower", 14.2, 25),
+("Broccoli", 12.1, 275),
+("Cucumber", 6.3, 85)
+;
+
+
+
+
+
+
+
+
+CREATE TABLE fruits 
+(	serial_num INTEGER (8) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	fruit_name VARCHAR(25),
+	quantity DECIMAL(4,1),
+	price INTEGER(4)
+);
+
+
+
+INSERT INTO fruits (fruit_name, quantity, price) VALUES
+("Apple", 25.0, 120),
+("Watermelon", 57.5, 50),
+("Strawberry", 10.4, 450),
+("Orange", 28.5, 30),
+("Grapes", 16.6, 75),
+("Cherry", 9.7, 200),
+("Mango", 29.5, 45),
+("Nectarine", 2.5, 300),
+("Banana", 15.5, 25),
+("Pomegranate", 22.8, 65),
+("Raspberry", 5.8, 375),
+("Papaya", 14.6, 80),
+("Kiwi", 3.2, 450),
+("Pineapple", 17.7, 150),
+("Apricot", 5.0, 200),
+("Grape fruit", 2.4, 270),
+("Peach", 3.5, 185),
+("Avocado", 15.0, 120),
+("Plum", 6.4, 165),
+("Lime", 11.5, 70),
+("Blueberry", 4.2, 425),
+("Litchee", 12.1, 75),
+("Maskmelon", 6.3, 85)
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE spices 
+(	serial_num INTEGER(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(25),
+	company_name VARCHAR(25),
+	price INTEGER(4),
+	quantity INTEGER(4)
+);
+
+INSERT INTO spices (name, company_name, price, quantity)VALUES
+("Sabji Masala", "Ashok", 50, 645),
+("Garam Masala", "Ashok", 35, 453),
+("Chola Masala", "Ashok", 85, 55),
+("Meat Masala", "Ashok", 62, 64),
+("Chana Masala", "Ashok", 35, 147),
+("Panipuri Masala", "Ashok", 15, 48),
+("Bhelpuri Masala", "Ashok", 5, 36),
+("Turmeric", "Ashok", 31, 45),
+("Sambhar Masala", "Catch", 51, 64),
+("Rajma Masala", "Catch", 40, 22),
+("Chola Masala", "Catch", 75, 28),
+("Meat Masala", "Catch", 13, 67),
+("Sabji Masala", "Catch", 98, 32),
+("Garam Masala", "Catch", 46, 17),
+("Panipuri Masala", "Catch", 78, 63),
+("Meat Masala", "Kitchen King", 30, 72),
+("Chicken Masala", "Kitchen King", 65, 89),
+("Tumeric", "Kitchen King", 15, 75),
+("Sabji Masala", "Kitchen King", 61, 40),
+("Chola Masala", "Kitchen King", 87, 62),
+("Kashmiri mirch", "Kitchen King", 36, 50),
+("Garam masala", "Kitchen King", 41, 60),
+("Schezwan Masala", "Kitchen King", 17, 70),
+("Sambhar Masala", "Kitchen King", 96, 42)
+;
+
+
+
+
+
+
+
+
+CREATE TABLE flours 
+(	serial_num INTEGER(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(25),
+	price INTEGER(4),
+	quantity DECIMAL(4,1)
+);
+
+INSERT INTO flours (name, price, quantity) VALUES
+("Cake flour", 60, 75.6),
+("Pastry flour", 42, 92.4),
+("Bread flour", 57, 116.5),
+("Wheat flour", 93, 975.0),
+("Multigrain flour", 115, 544.3),
+("Gluten free flour", 160, 85.1),
+("White wheat flour", 35, 89.6),
+("Almond flour", 215, 23.0),
+("Rice flour", 25, 55.8),
+("Maize flour", 39, 9.4),
+("Soyabean flour", 85, 19.2),
+("Gram flour", 74, 27.9),
+("Jow flour", 91, 36.7),
+("All purpose flour", 17, 175.2)
+;
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE rice_pulses
+(	serial_num INTEGER(3) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+	name VARCHAR(25),
+	price INTEGER(4),
+	quantity DECIMAL(4,1)
+);
+
+
+INSERT INTO rice_pulses (name, price, quantity) VALUES
+("Basmati Rice", 360, 275.6),
+("Moong dal", 42, 72.8),
+("Mogra Rice", 250, 126.3),
+("Chana dal", 98, 95.0),
+("Mysore Rice", 215, 44.3),
+("Masoor", 65, 95.1),
+("Aarhar Dal", 105, 989.6),
+("Balami Rice", 25, 123.8),
+("Rajma", 85, 155.1),
+("Mahasuri Rice", 49, 29.4),
+("Chola", 63, 69.2),
+("White peas", 84, 56.9),
+("Salem Rice", 89, 73.4),
+("Jow flour", 42, 46.3),
+("Urad dal", 87, 15.7)
+;
+
+
+
+
+
+
+
+
+
+CREATE TABLE dryfruits
+(	serial_num INTEGER(3) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+	name VARCHAR(25),
+	price INTEGER(4),
+	quantity DECIMAL(4,1)
+);
+
+INSERT INTO dryfruits (name, price, quantity) VALUES
+("Almond", 1360, 7.6),
+("Pistachios", 1400, 1.2),
+("Cashew", 7500, 6.3),
+("Apricot", 950, 2.1),
+("Dates", 3600, 27.4),
+("Hazelnuts", 1675, 9.4),
+("Walnut", 1360, 7.6),
+("Raisin", 3375, 4.4),
+("Prunes", 4400, 1.5),
+("Dry figs", 2315, 5.7),
+("Lotus seeds", 2100, 27.1),
+("Dry berries", 8900, 6.9),
+("Beatel nut", 4775, 8.7),
+("Flax seeds", 600, 4.5),
+("Seasame seeds", 125, 3.1),
+("Peanut", 1250, 8.2),
+("Chestnut", 1835, 6.3),
+("Dry coconut", 715, 4.2),
+("Pine nuts", 945, 7.5),
+("Saffron", 9500, 0.6)
+;
+
+
+
+
+
+
+
+
+CREATE TABLE cooking_oil
+(	serial_num INTEGER(3) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+	name VARCHAR(25),
+	company_name VARCHAR(25),
+	price INTEGER(4),
+	quantity INTEGER(4)
+);
+
+
+INSERT INTO cooking_oil (name, company_name, price, quantity) VALUES
+("Mustard oil","Fortune", 120, 982),
+("Canola oil","Fortune", 110, 82),
+("Olive oil","Fortune", 1050, 25),
+("Peanut oil","Fortune", 220, 97),
+("Sunflower oil","Fortune", 650, 18),
+("Soyabean oil","Fortune", 452, 44),
+("Corn oil","Fortune", 74, 71),
+("Coconut oil","Fortune", 195, 59),
+("Vegetable oil","Fortune", 70, 21),
+("Avocado oil","Fortune", 460, 41),
+("Walnut oil","Fortune", 750, 82),
+("Flaxseed oil","Fortune", 340, 74),
+("Seasame oil","Fortune", 110, 191),
+("Mustard oil","Tata", 110, 740),
+("Canola oil","Tata", 145, 260),
+("Olive oil","Tata", 178, 635),
+("Peanut oil","Tata", 190, 745),
+("Sunflower oil","Tata", 700, 74),
+("Soyabean oil","Tata", 1405, 75),
+("Corn oil","Tata", 125, 71),
+("Coconut oil","Tata", 155, 98),
+("Vegetable oil","Tata", 195, 75),
+("Avocado oil","Tata", 540, 74),
+("Walnut oil","Tata", 940, 94),
+("Flaxseed oil","Tata", 510, 22),
+("Seasame oil","Tata", 550, 2)
+;
+
+
+
+
+
+
+
+CREATE TABLE kitchen_utensils
+(	serial_num INTEGER(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	utensil_name VARCHAR(30),
+	material VARCHAR(25),
+	price INTEGER(3),
+	quantity INTEGER(3)
+);
+
+
+INSERT INTO kitchen_utensils (utensil_name, material, price, quantity) VALUES
+("Spoon (set of 5 pieces)", "Stainless steel", 100, 15),
+("Pressure cooker (7 lit.)", "Stainless steel", 1500, 8),
+("Coffee Cups (set of 6 pieces)", "Ceramic", 200, 22),
+("Frying Pan (12 inches)", "Cast iron", 250, 7),
+("Cups (set of 6 pieces)", "Glass", 90, 34),
+("Pressure cooker (5 lit.)", "Stainless steel", 1250, 17),
+("Spoon (set of 12 pieces)", "Ceramic", 360, 2),
+("Tea Pot (1 lit)", "Porcelain", 2600, 1),
+("Regular Glasses (set of 6 pieces)", "Stainless steel", 120, 62),
+("Glasses (set of 8 pieces)", "Glass", 800, 6),
+("Dinner Set (6-spoons,glasses,plates, 2-bowls,spatula,stirring spoon)", "Stainless steel", 2500, 3),
+("Sieve", "Stainless steel", 100, 4),
+("Tongs (set of 2 pieces)", "Stainless steel", 250, 19),
+("Pizza Cutter", "Stainless steel", 165, 44),
+("Knife set (set of 3 pieces)", "Stainless steel", 320, 75),
+("Dinner Set (8-spoons,glasses,plates,cups 3-bowls,spatula,stirring spoon)", "Porcelain", 9995, 1),
+("Fryin pan", "Non stick", 454, 25),
+("Cutting borad", "Plastic and steel", 225, 64),
+("Tea set (set of 6 cups, 2 tea pots)", "Ceramic", 900, 3)
+;
+
+
+
+
+
+
+
+
+CREATE TABLE snacks 
+(	serial_num INTEGER(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(25),
+	weight INTEGER(4),
+	price INTEGER(3),
+	quantity INTEGER(3)
+);
+
+
+INSERT INTO snacks (name, weight, price, quantity) VALUES
+("Tiger Crunch Biscuit",100, 20, 152),
+("Haldirams Nutcracker",200, 64, 12),
+("Maggi 2 PACK",20, 20, 32),
+("Butterbite Biscuit",80, 36, 47),
+("Haldirams Navratna",200, 62, 84),
+("Maggi 4 PACK",100, 48, 77),
+("Haldirams Kajumix",100, 112, 33),
+("Good-day Biscuit",70, 45, 52),
+("Hide and Seek Biscuit",100, 20, 42),
+("Marigold Buscuit",80, 20, 22),
+("Multigrain Biscuit",100, 20, 74),
+("Maggi 6 PACK",100, 96, 52),
+("Panjabi Tadka Haldiram",100, 20, 41),
+("Aalu bhujiya Haldiram",100, 20, 78)
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE deodrants 
+(	serial_num INTEGER(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(25),
+	company_name VARCHAR(25),
+	price INTEGER(3),
+	quantity INTEGER(3)
+);
+
+INSERT INTO deodrants (name, company_name, price, quantity) VALUES
+("Fogg","Fogg",250, 31),
+("AXE choclate", "AXE", 300, 17),
+("AXE gold","AXE", 500, 31),
+("Nivea Mens","Nivea", 350, 45),
+("Nivea Womens","Nivea", 325, 46),
+("AXE limited edition","AXE", 995, 31),
+("Wildstone","Wildstone", 145, 78),
+("Set wet mens","Setwet", 125, 15),
+("Set wet womens","Setwet", 145, 27),
+("Yardley","Loreal", 500, 24),
+("AXE signature","AXE", 250, 38),
+("Park avenue","Park Avenue", 450, 41)
+;
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE soaps
+(	serial_num INTEGER(3) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+	name VARCHAR(25),
+	price INTEGER(4),
+	quantity INTEGER(4)
+);
+
+
+INSERT INTO soaps (name, price, quantity) VALUES
+("Dettol cool", 27, 462),
+("Dettol original", 27, 52),
+("Dettol skincare", 35, 65),
+("Fiama Mens", 47, 42),
+("Fiama Womens", 52, 62),
+("Cinthol mint", 23, 87),
+("Cinthol lime", 23, 16),
+("Livebouy", 15, 46),
+("Santoor", 37, 55),
+("Pears", 75, 61),
+("Dove", 80, 156),
+("Wildstone soap", 65, 2),
+("Patanjali soap", 25, 15),
+("Liril", 56, 26),
+("Nivea", 85, 35)
+;
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE hair_care
+(	serial_num INTEGER(3) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+	name VARCHAR(25),
+	price INTEGER(4),
+	quantity INTEGER(4)
+);
+
+
+INSERT INTO hair_care (name, price, quantity) VALUES
+("Parachute oil", 45, 45),
+("Marico Amla oil", 65, 33),
+("Almond oil", 24, 29),
+("Coconut oil", 53, 26),
+("Park avenue oil", 43, 12),
+("Dabur Amla oil",96, 85),
+("Navratna oil", 75, 51),
+("Goodrej hair oil", 45, 15),
+("Beardo oil", 85, 785),
+("Loreal oil", 950, 45)
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE body_lotion
+(	serial_num INTEGER(3) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+	name VARCHAR(25),
+	price INTEGER(4),
+	quantity INTEGER(4)
+);
+
+
+
+INSERT INTO body_lotion (name, price, quantity) VALUES
+("Nivea coco", 150, 36),
+("Vaseline lotion", 160, 41),
+("Ayur", 175, 16),
+("Loreal lotion", 185, 42),
+("Chocolate lotion", 195, 36),
+("Biotek lotion", 236, 27),
+("Goodrej lotion", 145, 45),
+("Beardo lotion", 120, 75),
+("Marico lotion", 165, 69)
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE shampoo
+(	serial_num INTEGER(3) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+	name VARCHAR(25),
+	price INTEGER(4),
+	quantity INTEGER(4)
+);
+
+
+INSERT INTO shampoo (name, price, quantity) VALUES
+("Head&Shoulders",120, 32),
+("Loreal",650, 21),
+("Nivea",135, 42),
+("Himalaya",175, 85),
+("Biotek shampoo",250, 46),
+("Ayur Shampoo",160, 36),
+("Bajaj shampoo",120, 32),
+("Sunsilk",90, 23),
+("Dove",180, 17),
+("Clinic plus",130, 9),
+("Pantine",190, 13)
+;
+
+
+
+
+
+
+
+
+CREATE TABLE face_cream
+(	serial_num INTEGER(3) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+	name VARCHAR(25),
+	price INTEGER(4),
+	quantity INTEGER(4)
+);
+
+INSERT INTO face_cream (name, price, quantity) VALUES
+("Himalaya",69, 23),
+("Garnier",95, 43),
+("Nivea",45, 29),
+("Loral",125, 33),
+("Emani",99, 12),
+("Beardo",165, 45),
+("Boroplus",35, 78),
+("Biotek",89, 23),
+("Fair&Lovely",59, 17),
+("Vaseline",39, 3),
+("Fair&Handsome",69, 17),
+("Vico Termeric",48, 42),
+("Dark spot reduction",119, 13)
+;
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE face_wash
+(	serial_num INTEGER(3) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+	name VARCHAR(25),
+	price INTEGER(4),
+	quantity INTEGER(4)
+);
+
+
+
+
+INSERT INTO face_wash (name, price, quantity) VALUES
+("Garnier Oil free",69, 13),
+("Garnier acnofight",99, 45),
+("Ponds men",89, 27),
+("Nivea women",105, 17),
+("Himalaya neem",78, 7),
+("Himalaya piple clear",112, 51),
+("Loreal white",269, 75),
+("Patanjali herbal",50, 12),
+("Garnier lime",78, 23)
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE stores
+(	store_id INTEGER(4) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	city VARCHAR(20),
+	address VARCHAR(50),
+	state VARCHAR(25),
+	phone INTEGER(10)
+);
+
+INSERT INTO stores (address, city, state, phone) VALUES
+("Gomti complex, station road", "Lucknow", "Uttar Pradesh", 9894465),
+("6 A store, Sadar", "Jabalpur", "Madhya Pradesh", 9891360),
+("ABC mall", "New Delhi", "Delhi", 1684513),
+("Burlington Arcade, Park road", "Banglore", "Karnataka", 4681565),
+("Tulip Complex, Hussainganj", "Mumbai", "Maharashtra", 5465161),
+("Z square mall,Gol market", "Hyderabad", "Telangana", 98456465),
+("Shopping Arcade, Marina beach", "Chennai", "Tamil Nadu", 746495),
+("9D/2, Market road", "Kochi", "Kerala", 746465),
+("Fun Republic, near IT park", "Gurgaon", "Harayana", 464467),
+("Shopping Plaza, Kiwainagar", "Bhopal", "Madhya Pradesh", 2103445),
+("Plot 56, Banglabazaar", "Kolkata", "West Bengal", 8456845),
+("Shopping Complex, Hauzkhas", "New Delhi", "Delhi", 4835461),
+("Zoom Arcade, CyberHub", "Gurgaon", "Harayana", 4600235),
+("Shop no. 55, Wave Mall", "Mumbai", "Maharashtra", 963513),
+("9 D/2 shop, Safedabad", "Hyderabad", "Telangana", 6413110),
+("Pheneix Mall, Central Market", "Patna", "Bihar", 1247890),
+("Jaipur Complex, Dollar Market", "Jaipur", "Rajasthan", 8445005),
+("Kendra arcade, Airport Road", "Cuttack", "Orrisha", 457803256),
+("DLF Mall, Main market", "Kanpur", "Uttar Pradesh", 95451201),
+("Raman Complex, MG Road", "Dehradun", "Uttrakhand", 456167)
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE feedback
+(
+	customer_name VARCHAR(25) NOT NULL,
+	email VARCHAR(25) PRIMARY KEY,
+	age INTEGER(3),
+	helful_rating VARCHAR(25),
+	UX_rating  VARCHAR(25),
+	UI_rating VARCHAR(25),
+	recommend_rating VARCHAR(25)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE complaint
+(	
+	serial_num INTEGER(3),
+	customer_name VARCHAR(25),
+	email VARCHAR(25),
+	complaint VARCHAR(200)
+)
